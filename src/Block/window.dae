@@ -1,0 +1,1796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2017-11-18T10:46:38Z</created><keywords></keywords><modified>2017-11-18T10:46:38Z</modified><revision></revision><subject></subject><title></title><unit meter="1.000000" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
+  <library_materials>
+    <material id="WindowMat" name="WindowMat">
+      <instance_effect url="#WindowMat-fx"/>
+    </material>
+    <material id="WindowGlassMat" name="WindowGlassMat">
+      <instance_effect url="#WindowGlassMat-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="WindowMat-fx" name="WindowMat">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.439216  0.294118 0.078431 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.025098  0.025098 0.025098 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="WindowGlassMat-fx" name="WindowGlassMat">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.690196  0.690196 0.690196 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.025098  0.025098 0.025098 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.910000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="Box2-lib" name="Box2Mesh">
+      <mesh>
+        <source id="Box2-POSITION">
+          <float_array id="Box2-POSITION-array" count="24">
+0.500000 0.500000 0.500000
+0.500000 0.500000 -0.500000
+0.500000 -0.500000 0.500000
+0.500000 -0.500000 -0.500000
+-0.500000 0.500000 -0.500000
+-0.500000 0.500000 0.500000
+-0.500000 -0.500000 -0.500000
+-0.500000 -0.500000 0.500000
+</float_array>
+          <technique_common>
+            <accessor source="#Box2-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box2-Normal0">
+          <float_array id="Box2-Normal0-array" count="72">
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box2-Normal0-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box2-UV0">
+          <float_array id="Box2-UV0-array" count="48">
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box2-UV0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box2-VERTEX">
+          <input semantic="POSITION" source="#Box2-POSITION"/>
+        </vertices>
+        <polylist count="6" material="WindowMat"><input semantic="VERTEX" offset="0" source="#Box2-VERTEX"/><input semantic="NORMAL" offset="1" source="#Box2-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Box2-UV0"/><vcount>4 4 4 4 4 4 </vcount><p> 0 0 0 2 1 1 3 2 2 1 3 3 4 4 4 6 5 5 7 6 6 5 7 7 4 8 8 5 9 9 0 10 10 1 11 11 7 12 12 6 13 13 3 14 14 2 15 15 5 16 16 7 17 17 2 18 18 0 19 19 1 20 20 3 21 21 6 22 22 4 23 23</p></polylist>
+      </mesh>
+    </geometry>
+    <geometry id="Box16-lib" name="Box16Mesh">
+      <mesh>
+        <source id="Box16-POSITION">
+          <float_array id="Box16-POSITION-array" count="24">
+0.500000 0.500000 0.500000
+0.500000 0.500000 -0.500000
+0.500000 -0.500000 0.500000
+0.500000 -0.500000 -0.500000
+-0.500000 0.500000 -0.500000
+-0.500000 0.500000 0.500000
+-0.500000 -0.500000 -0.500000
+-0.500000 -0.500000 0.500000
+</float_array>
+          <technique_common>
+            <accessor source="#Box16-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box16-Normal0">
+          <float_array id="Box16-Normal0-array" count="72">
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box16-Normal0-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box16-UV0">
+          <float_array id="Box16-UV0-array" count="48">
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box16-UV0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box16-VERTEX">
+          <input semantic="POSITION" source="#Box16-POSITION"/>
+        </vertices>
+        <polylist count="6" material="WindowMat"><input semantic="VERTEX" offset="0" source="#Box16-VERTEX"/><input semantic="NORMAL" offset="1" source="#Box16-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Box16-UV0"/><vcount>4 4 4 4 4 4 </vcount><p> 0 0 0 2 1 1 3 2 2 1 3 3 4 4 4 6 5 5 7 6 6 5 7 7 4 8 8 5 9 9 0 10 10 1 11 11 7 12 12 6 13 13 3 14 14 2 15 15 5 16 16 7 17 17 2 18 18 0 19 19 1 20 20 3 21 21 6 22 22 4 23 23</p></polylist>
+      </mesh>
+    </geometry>
+    <geometry id="Box5-lib" name="Box5Mesh">
+      <mesh>
+        <source id="Box5-POSITION">
+          <float_array id="Box5-POSITION-array" count="24">
+0.500000 0.500000 0.500000
+0.500000 0.500000 -0.500000
+0.500000 -0.500000 0.500000
+0.500000 -0.500000 -0.500000
+-0.500000 0.500000 -0.500000
+-0.500000 0.500000 0.500000
+-0.500000 -0.500000 -0.500000
+-0.500000 -0.500000 0.500000
+</float_array>
+          <technique_common>
+            <accessor source="#Box5-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box5-Normal0">
+          <float_array id="Box5-Normal0-array" count="72">
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box5-Normal0-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box5-UV0">
+          <float_array id="Box5-UV0-array" count="48">
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box5-UV0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box5-VERTEX">
+          <input semantic="POSITION" source="#Box5-POSITION"/>
+        </vertices>
+        <polylist count="6" material="WindowMat"><input semantic="VERTEX" offset="0" source="#Box5-VERTEX"/><input semantic="NORMAL" offset="1" source="#Box5-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Box5-UV0"/><vcount>4 4 4 4 4 4 </vcount><p> 0 0 0 2 1 1 3 2 2 1 3 3 4 4 4 6 5 5 7 6 6 5 7 7 4 8 8 5 9 9 0 10 10 1 11 11 7 12 12 6 13 13 3 14 14 2 15 15 5 16 16 7 17 17 2 18 18 0 19 19 1 20 20 3 21 21 6 22 22 4 23 23</p></polylist>
+      </mesh>
+    </geometry>
+    <geometry id="Box14-lib" name="Box14Mesh">
+      <mesh>
+        <source id="Box14-POSITION">
+          <float_array id="Box14-POSITION-array" count="24">
+0.500000 0.500000 0.500000
+0.500000 0.500000 -0.500000
+0.500000 -0.500000 0.500000
+0.500000 -0.500000 -0.500000
+-0.500000 0.500000 -0.500000
+-0.500000 0.500000 0.500000
+-0.500000 -0.500000 -0.500000
+-0.500000 -0.500000 0.500000
+</float_array>
+          <technique_common>
+            <accessor source="#Box14-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box14-Normal0">
+          <float_array id="Box14-Normal0-array" count="72">
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box14-Normal0-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box14-UV0">
+          <float_array id="Box14-UV0-array" count="48">
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box14-UV0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box14-VERTEX">
+          <input semantic="POSITION" source="#Box14-POSITION"/>
+        </vertices>
+        <polylist count="6" material="WindowMat"><input semantic="VERTEX" offset="0" source="#Box14-VERTEX"/><input semantic="NORMAL" offset="1" source="#Box14-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Box14-UV0"/><vcount>4 4 4 4 4 4 </vcount><p> 0 0 0 2 1 1 3 2 2 1 3 3 4 4 4 6 5 5 7 6 6 5 7 7 4 8 8 5 9 9 0 10 10 1 11 11 7 12 12 6 13 13 3 14 14 2 15 15 5 16 16 7 17 17 2 18 18 0 19 19 1 20 20 3 21 21 6 22 22 4 23 23</p></polylist>
+      </mesh>
+    </geometry>
+    <geometry id="Box-lib" name="BoxMesh">
+      <mesh>
+        <source id="Box-POSITION">
+          <float_array id="Box-POSITION-array" count="24">
+0.500000 0.500000 0.500000
+0.500000 0.500000 -0.500000
+0.500000 -0.500000 0.500000
+0.500000 -0.500000 -0.500000
+-0.500000 0.500000 -0.500000
+-0.500000 0.500000 0.500000
+-0.500000 -0.500000 -0.500000
+-0.500000 -0.500000 0.500000
+</float_array>
+          <technique_common>
+            <accessor source="#Box-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box-Normal0">
+          <float_array id="Box-Normal0-array" count="72">
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box-Normal0-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box-UV0">
+          <float_array id="Box-UV0-array" count="48">
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box-UV0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box-VERTEX">
+          <input semantic="POSITION" source="#Box-POSITION"/>
+        </vertices>
+        <polylist count="6" material="WindowMat"><input semantic="VERTEX" offset="0" source="#Box-VERTEX"/><input semantic="NORMAL" offset="1" source="#Box-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Box-UV0"/><vcount>4 4 4 4 4 4 </vcount><p> 0 0 0 2 1 1 3 2 2 1 3 3 4 4 4 6 5 5 7 6 6 5 7 7 4 8 8 5 9 9 0 10 10 1 11 11 7 12 12 6 13 13 3 14 14 2 15 15 5 16 16 7 17 17 2 18 18 0 19 19 1 20 20 3 21 21 6 22 22 4 23 23</p></polylist>
+      </mesh>
+    </geometry>
+    <geometry id="Box13-lib" name="Box13Mesh">
+      <mesh>
+        <source id="Box13-POSITION">
+          <float_array id="Box13-POSITION-array" count="24">
+0.500000 0.500000 0.500000
+0.500000 0.500000 -0.500000
+0.500000 -0.500000 0.500000
+0.500000 -0.500000 -0.500000
+-0.500000 0.500000 -0.500000
+-0.500000 0.500000 0.500000
+-0.500000 -0.500000 -0.500000
+-0.500000 -0.500000 0.500000
+</float_array>
+          <technique_common>
+            <accessor source="#Box13-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box13-Normal0">
+          <float_array id="Box13-Normal0-array" count="72">
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box13-Normal0-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box13-UV0">
+          <float_array id="Box13-UV0-array" count="48">
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box13-UV0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box13-VERTEX">
+          <input semantic="POSITION" source="#Box13-POSITION"/>
+        </vertices>
+        <polylist count="6" material="WindowMat"><input semantic="VERTEX" offset="0" source="#Box13-VERTEX"/><input semantic="NORMAL" offset="1" source="#Box13-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Box13-UV0"/><vcount>4 4 4 4 4 4 </vcount><p> 0 0 0 2 1 1 3 2 2 1 3 3 4 4 4 6 5 5 7 6 6 5 7 7 4 8 8 5 9 9 0 10 10 1 11 11 7 12 12 6 13 13 3 14 14 2 15 15 5 16 16 7 17 17 2 18 18 0 19 19 1 20 20 3 21 21 6 22 22 4 23 23</p></polylist>
+      </mesh>
+    </geometry>
+    <geometry id="Box9-lib" name="Box9Mesh">
+      <mesh>
+        <source id="Box9-POSITION">
+          <float_array id="Box9-POSITION-array" count="24">
+0.500000 0.500000 0.500000
+0.500000 0.500000 -0.500000
+0.500000 -0.500000 0.500000
+0.500000 -0.500000 -0.500000
+-0.500000 0.500000 -0.500000
+-0.500000 0.500000 0.500000
+-0.500000 -0.500000 -0.500000
+-0.500000 -0.500000 0.500000
+</float_array>
+          <technique_common>
+            <accessor source="#Box9-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box9-Normal0">
+          <float_array id="Box9-Normal0-array" count="72">
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box9-Normal0-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box9-UV0">
+          <float_array id="Box9-UV0-array" count="48">
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box9-UV0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box9-VERTEX">
+          <input semantic="POSITION" source="#Box9-POSITION"/>
+        </vertices>
+        <polylist count="6" material="WindowMat"><input semantic="VERTEX" offset="0" source="#Box9-VERTEX"/><input semantic="NORMAL" offset="1" source="#Box9-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Box9-UV0"/><vcount>4 4 4 4 4 4 </vcount><p> 0 0 0 2 1 1 3 2 2 1 3 3 4 4 4 6 5 5 7 6 6 5 7 7 4 8 8 5 9 9 0 10 10 1 11 11 7 12 12 6 13 13 3 14 14 2 15 15 5 16 16 7 17 17 2 18 18 0 19 19 1 20 20 3 21 21 6 22 22 4 23 23</p></polylist>
+      </mesh>
+    </geometry>
+    <geometry id="Box4-lib" name="Box4Mesh">
+      <mesh>
+        <source id="Box4-POSITION">
+          <float_array id="Box4-POSITION-array" count="24">
+0.500000 0.500000 0.500000
+0.500000 0.500000 -0.500000
+0.500000 -0.500000 0.500000
+0.500000 -0.500000 -0.500000
+-0.500000 0.500000 -0.500000
+-0.500000 0.500000 0.500000
+-0.500000 -0.500000 -0.500000
+-0.500000 -0.500000 0.500000
+</float_array>
+          <technique_common>
+            <accessor source="#Box4-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box4-Normal0">
+          <float_array id="Box4-Normal0-array" count="72">
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box4-Normal0-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box4-UV0">
+          <float_array id="Box4-UV0-array" count="48">
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box4-UV0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box4-VERTEX">
+          <input semantic="POSITION" source="#Box4-POSITION"/>
+        </vertices>
+        <polylist count="6" material="WindowMat"><input semantic="VERTEX" offset="0" source="#Box4-VERTEX"/><input semantic="NORMAL" offset="1" source="#Box4-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Box4-UV0"/><vcount>4 4 4 4 4 4 </vcount><p> 0 0 0 2 1 1 3 2 2 1 3 3 4 4 4 6 5 5 7 6 6 5 7 7 4 8 8 5 9 9 0 10 10 1 11 11 7 12 12 6 13 13 3 14 14 2 15 15 5 16 16 7 17 17 2 18 18 0 19 19 1 20 20 3 21 21 6 22 22 4 23 23</p></polylist>
+      </mesh>
+    </geometry>
+    <geometry id="Box12-lib" name="Box12Mesh">
+      <mesh>
+        <source id="Box12-POSITION">
+          <float_array id="Box12-POSITION-array" count="24">
+0.500000 0.500000 0.500000
+0.500000 0.500000 -0.500000
+0.500000 -0.500000 0.500000
+0.500000 -0.500000 -0.500000
+-0.500000 0.500000 -0.500000
+-0.500000 0.500000 0.500000
+-0.500000 -0.500000 -0.500000
+-0.500000 -0.500000 0.500000
+</float_array>
+          <technique_common>
+            <accessor source="#Box12-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box12-Normal0">
+          <float_array id="Box12-Normal0-array" count="72">
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box12-Normal0-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box12-UV0">
+          <float_array id="Box12-UV0-array" count="48">
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box12-UV0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box12-VERTEX">
+          <input semantic="POSITION" source="#Box12-POSITION"/>
+        </vertices>
+        <polylist count="6" material="WindowMat"><input semantic="VERTEX" offset="0" source="#Box12-VERTEX"/><input semantic="NORMAL" offset="1" source="#Box12-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Box12-UV0"/><vcount>4 4 4 4 4 4 </vcount><p> 0 0 0 2 1 1 3 2 2 1 3 3 4 4 4 6 5 5 7 6 6 5 7 7 4 8 8 5 9 9 0 10 10 1 11 11 7 12 12 6 13 13 3 14 14 2 15 15 5 16 16 7 17 17 2 18 18 0 19 19 1 20 20 3 21 21 6 22 22 4 23 23</p></polylist>
+      </mesh>
+    </geometry>
+    <geometry id="Box1-lib" name="Box1Mesh">
+      <mesh>
+        <source id="Box1-POSITION">
+          <float_array id="Box1-POSITION-array" count="24">
+0.500000 0.500000 0.500000
+0.500000 0.500000 -0.500000
+0.500000 -0.500000 0.500000
+0.500000 -0.500000 -0.500000
+-0.500000 0.500000 -0.500000
+-0.500000 0.500000 0.500000
+-0.500000 -0.500000 -0.500000
+-0.500000 -0.500000 0.500000
+</float_array>
+          <technique_common>
+            <accessor source="#Box1-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box1-Normal0">
+          <float_array id="Box1-Normal0-array" count="72">
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box1-Normal0-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box1-UV0">
+          <float_array id="Box1-UV0-array" count="48">
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box1-UV0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box1-VERTEX">
+          <input semantic="POSITION" source="#Box1-POSITION"/>
+        </vertices>
+        <polylist count="6" material="WindowMat"><input semantic="VERTEX" offset="0" source="#Box1-VERTEX"/><input semantic="NORMAL" offset="1" source="#Box1-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Box1-UV0"/><vcount>4 4 4 4 4 4 </vcount><p> 0 0 0 2 1 1 3 2 2 1 3 3 4 4 4 6 5 5 7 6 6 5 7 7 4 8 8 5 9 9 0 10 10 1 11 11 7 12 12 6 13 13 3 14 14 2 15 15 5 16 16 7 17 17 2 18 18 0 19 19 1 20 20 3 21 21 6 22 22 4 23 23</p></polylist>
+      </mesh>
+    </geometry>
+    <geometry id="Box8-lib" name="Box8Mesh">
+      <mesh>
+        <source id="Box8-POSITION">
+          <float_array id="Box8-POSITION-array" count="24">
+0.500000 0.500000 0.500000
+0.500000 0.500000 -0.500000
+0.500000 -0.500000 0.500000
+0.500000 -0.500000 -0.500000
+-0.500000 0.500000 -0.500000
+-0.500000 0.500000 0.500000
+-0.500000 -0.500000 -0.500000
+-0.500000 -0.500000 0.500000
+</float_array>
+          <technique_common>
+            <accessor source="#Box8-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box8-Normal0">
+          <float_array id="Box8-Normal0-array" count="72">
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box8-Normal0-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box8-UV0">
+          <float_array id="Box8-UV0-array" count="48">
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box8-UV0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box8-VERTEX">
+          <input semantic="POSITION" source="#Box8-POSITION"/>
+        </vertices>
+        <polylist count="6" material="WindowMat"><input semantic="VERTEX" offset="0" source="#Box8-VERTEX"/><input semantic="NORMAL" offset="1" source="#Box8-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Box8-UV0"/><vcount>4 4 4 4 4 4 </vcount><p> 0 0 0 2 1 1 3 2 2 1 3 3 4 4 4 6 5 5 7 6 6 5 7 7 4 8 8 5 9 9 0 10 10 1 11 11 7 12 12 6 13 13 3 14 14 2 15 15 5 16 16 7 17 17 2 18 18 0 19 19 1 20 20 3 21 21 6 22 22 4 23 23</p></polylist>
+      </mesh>
+    </geometry>
+    <geometry id="Plane-lib" name="PlaneMesh">
+      <mesh>
+        <source id="Plane-POSITION">
+          <float_array id="Plane-POSITION-array" count="12">
+-2.000000 0.000000 -2.000000
+2.000000 0.000000 -2.000000
+-2.000000 -0.000000 2.000000
+2.000000 -0.000000 2.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Plane-POSITION-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane-Normal0">
+          <float_array id="Plane-Normal0-array" count="12">
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Plane-Normal0-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane-UV0">
+          <float_array id="Plane-UV0-array" count="8">
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Plane-UV0-array" count="4" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Plane-VERTEX">
+          <input semantic="POSITION" source="#Plane-POSITION"/>
+        </vertices>
+        <polylist count="1" material="WindowGlassMat"><input semantic="VERTEX" offset="0" source="#Plane-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane-UV0"/><vcount>4 </vcount><p> 0 0 0 2 1 1 3 2 2 1 3 3</p></polylist>
+      </mesh>
+    </geometry>
+    <geometry id="Box3-lib" name="Box3Mesh">
+      <mesh>
+        <source id="Box3-POSITION">
+          <float_array id="Box3-POSITION-array" count="24">
+0.500000 0.500000 0.500000
+0.500000 0.500000 -0.500000
+0.500000 -0.500000 0.500000
+0.500000 -0.500000 -0.500000
+-0.500000 0.500000 -0.500000
+-0.500000 0.500000 0.500000
+-0.500000 -0.500000 -0.500000
+-0.500000 -0.500000 0.500000
+</float_array>
+          <technique_common>
+            <accessor source="#Box3-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box3-Normal0">
+          <float_array id="Box3-Normal0-array" count="72">
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box3-Normal0-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box3-UV0">
+          <float_array id="Box3-UV0-array" count="48">
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box3-UV0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box3-VERTEX">
+          <input semantic="POSITION" source="#Box3-POSITION"/>
+        </vertices>
+        <polylist count="6" material="WindowMat"><input semantic="VERTEX" offset="0" source="#Box3-VERTEX"/><input semantic="NORMAL" offset="1" source="#Box3-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Box3-UV0"/><vcount>4 4 4 4 4 4 </vcount><p> 0 0 0 2 1 1 3 2 2 1 3 3 4 4 4 6 5 5 7 6 6 5 7 7 4 8 8 5 9 9 0 10 10 1 11 11 7 12 12 6 13 13 3 14 14 2 15 15 5 16 16 7 17 17 2 18 18 0 19 19 1 20 20 3 21 21 6 22 22 4 23 23</p></polylist>
+      </mesh>
+    </geometry>
+    <geometry id="Box7-lib" name="Box7Mesh">
+      <mesh>
+        <source id="Box7-POSITION">
+          <float_array id="Box7-POSITION-array" count="24">
+0.500000 0.500000 0.500000
+0.500000 0.500000 -0.500000
+0.500000 -0.500000 0.500000
+0.500000 -0.500000 -0.500000
+-0.500000 0.500000 -0.500000
+-0.500000 0.500000 0.500000
+-0.500000 -0.500000 -0.500000
+-0.500000 -0.500000 0.500000
+</float_array>
+          <technique_common>
+            <accessor source="#Box7-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box7-Normal0">
+          <float_array id="Box7-Normal0-array" count="72">
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box7-Normal0-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box7-UV0">
+          <float_array id="Box7-UV0-array" count="48">
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box7-UV0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box7-VERTEX">
+          <input semantic="POSITION" source="#Box7-POSITION"/>
+        </vertices>
+        <polylist count="6" material="WindowMat"><input semantic="VERTEX" offset="0" source="#Box7-VERTEX"/><input semantic="NORMAL" offset="1" source="#Box7-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Box7-UV0"/><vcount>4 4 4 4 4 4 </vcount><p> 0 0 0 2 1 1 3 2 2 1 3 3 4 4 4 6 5 5 7 6 6 5 7 7 4 8 8 5 9 9 0 10 10 1 11 11 7 12 12 6 13 13 3 14 14 2 15 15 5 16 16 7 17 17 2 18 18 0 19 19 1 20 20 3 21 21 6 22 22 4 23 23</p></polylist>
+      </mesh>
+    </geometry>
+    <geometry id="Box6-lib" name="Box6Mesh">
+      <mesh>
+        <source id="Box6-POSITION">
+          <float_array id="Box6-POSITION-array" count="24">
+0.500000 0.500000 0.500000
+0.500000 0.500000 -0.500000
+0.500000 -0.500000 0.500000
+0.500000 -0.500000 -0.500000
+-0.500000 0.500000 -0.500000
+-0.500000 0.500000 0.500000
+-0.500000 -0.500000 -0.500000
+-0.500000 -0.500000 0.500000
+</float_array>
+          <technique_common>
+            <accessor source="#Box6-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box6-Normal0">
+          <float_array id="Box6-Normal0-array" count="72">
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box6-Normal0-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box6-UV0">
+          <float_array id="Box6-UV0-array" count="48">
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box6-UV0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box6-VERTEX">
+          <input semantic="POSITION" source="#Box6-POSITION"/>
+        </vertices>
+        <polylist count="6" material="WindowMat"><input semantic="VERTEX" offset="0" source="#Box6-VERTEX"/><input semantic="NORMAL" offset="1" source="#Box6-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Box6-UV0"/><vcount>4 4 4 4 4 4 </vcount><p> 0 0 0 2 1 1 3 2 2 1 3 3 4 4 4 6 5 5 7 6 6 5 7 7 4 8 8 5 9 9 0 10 10 1 11 11 7 12 12 6 13 13 3 14 14 2 15 15 5 16 16 7 17 17 2 18 18 0 19 19 1 20 20 3 21 21 6 22 22 4 23 23</p></polylist>
+      </mesh>
+    </geometry>
+    <geometry id="Box15-lib" name="Box15Mesh">
+      <mesh>
+        <source id="Box15-POSITION">
+          <float_array id="Box15-POSITION-array" count="24">
+0.500000 0.500000 0.500000
+0.500000 0.500000 -0.500000
+0.500000 -0.500000 0.500000
+0.500000 -0.500000 -0.500000
+-0.500000 0.500000 -0.500000
+-0.500000 0.500000 0.500000
+-0.500000 -0.500000 -0.500000
+-0.500000 -0.500000 0.500000
+</float_array>
+          <technique_common>
+            <accessor source="#Box15-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box15-Normal0">
+          <float_array id="Box15-Normal0-array" count="72">
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box15-Normal0-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box15-UV0">
+          <float_array id="Box15-UV0-array" count="48">
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box15-UV0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box15-VERTEX">
+          <input semantic="POSITION" source="#Box15-POSITION"/>
+        </vertices>
+        <polylist count="6" material="WindowMat"><input semantic="VERTEX" offset="0" source="#Box15-VERTEX"/><input semantic="NORMAL" offset="1" source="#Box15-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Box15-UV0"/><vcount>4 4 4 4 4 4 </vcount><p> 0 0 0 2 1 1 3 2 2 1 3 3 4 4 4 6 5 5 7 6 6 5 7 7 4 8 8 5 9 9 0 10 10 1 11 11 7 12 12 6 13 13 3 14 14 2 15 15 5 16 16 7 17 17 2 18 18 0 19 19 1 20 20 3 21 21 6 22 22 4 23 23</p></polylist>
+      </mesh>
+    </geometry>
+    <geometry id="Box10-lib" name="Box10Mesh">
+      <mesh>
+        <source id="Box10-POSITION">
+          <float_array id="Box10-POSITION-array" count="24">
+0.500000 0.500000 0.500000
+0.500000 0.500000 -0.500000
+0.500000 -0.500000 0.500000
+0.500000 -0.500000 -0.500000
+-0.500000 0.500000 -0.500000
+-0.500000 0.500000 0.500000
+-0.500000 -0.500000 -0.500000
+-0.500000 -0.500000 0.500000
+</float_array>
+          <technique_common>
+            <accessor source="#Box10-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box10-Normal0">
+          <float_array id="Box10-Normal0-array" count="72">
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box10-Normal0-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box10-UV0">
+          <float_array id="Box10-UV0-array" count="48">
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box10-UV0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box10-VERTEX">
+          <input semantic="POSITION" source="#Box10-POSITION"/>
+        </vertices>
+        <polylist count="6" material="WindowMat"><input semantic="VERTEX" offset="0" source="#Box10-VERTEX"/><input semantic="NORMAL" offset="1" source="#Box10-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Box10-UV0"/><vcount>4 4 4 4 4 4 </vcount><p> 0 0 0 2 1 1 3 2 2 1 3 3 4 4 4 6 5 5 7 6 6 5 7 7 4 8 8 5 9 9 0 10 10 1 11 11 7 12 12 6 13 13 3 14 14 2 15 15 5 16 16 7 17 17 2 18 18 0 19 19 1 20 20 3 21 21 6 22 22 4 23 23</p></polylist>
+      </mesh>
+    </geometry>
+    <geometry id="Box11-lib" name="Box11Mesh">
+      <mesh>
+        <source id="Box11-POSITION">
+          <float_array id="Box11-POSITION-array" count="24">
+0.500000 0.500000 0.500000
+0.500000 0.500000 -0.500000
+0.500000 -0.500000 0.500000
+0.500000 -0.500000 -0.500000
+-0.500000 0.500000 -0.500000
+-0.500000 0.500000 0.500000
+-0.500000 -0.500000 -0.500000
+-0.500000 -0.500000 0.500000
+</float_array>
+          <technique_common>
+            <accessor source="#Box11-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box11-Normal0">
+          <float_array id="Box11-Normal0-array" count="72">
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box11-Normal0-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box11-UV0">
+          <float_array id="Box11-UV0-array" count="48">
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Box11-UV0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box11-VERTEX">
+          <input semantic="POSITION" source="#Box11-POSITION"/>
+        </vertices>
+        <polylist count="6" material="WindowMat"><input semantic="VERTEX" offset="0" source="#Box11-VERTEX"/><input semantic="NORMAL" offset="1" source="#Box11-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Box11-UV0"/><vcount>4 4 4 4 4 4 </vcount><p> 0 0 0 2 1 1 3 2 2 1 3 3 4 4 4 6 5 5 7 6 6 5 7 7 4 8 8 5 9 9 0 10 10 1 11 11 7 12 12 6 13 13 3 14 14 2 15 15 5 16 16 7 17 17 2 18 18 0 19 19 1 20 20 3 21 21 6 22 22 4 23 23</p></polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Window" name="Window">
+      <node name="Box2" id="Box2" sid="Box2"><matrix sid="matrix">1.004000 0.000000 0.000000 0.600500 0.000000 0.075000 0.000000 0.061600 0.000000 0.000000 0.068200 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Box2-lib"><bind_material><technique_common><instance_material symbol="WindowMat" target="#WindowMat"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Box16" id="Box16" sid="Box16"><matrix sid="matrix">0.038100 0.000000 0.000000 -0.568800 0.000000 2.465600 0.000000 1.254600 0.000000 0.000000 0.068200 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Box16-lib"><bind_material><technique_common><instance_material symbol="WindowMat" target="#WindowMat"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Box5" id="Box5" sid="Box5"><matrix sid="matrix">1.004000 0.000000 0.000000 0.600500 0.000000 0.047100 0.000000 1.489500 0.000000 0.000000 0.068200 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Box5-lib"><bind_material><technique_common><instance_material symbol="WindowMat" target="#WindowMat"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Box14" id="Box14" sid="Box14"><matrix sid="matrix">1.004000 0.000000 0.000000 -0.583800 0.000000 0.047100 0.000000 1.967600 0.000000 0.000000 0.068200 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Box14-lib"><bind_material><technique_common><instance_material symbol="WindowMat" target="#WindowMat"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Box" id="Box" sid="Box"><matrix sid="matrix">0.221700 0.000000 0.000000 0.000000 0.000000 2.462000 0.000000 1.257600 0.000000 0.000000 0.068200 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Box-lib"><bind_material><technique_common><instance_material symbol="WindowMat" target="#WindowMat"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Box13" id="Box13" sid="Box13"><matrix sid="matrix">1.004000 0.000000 0.000000 -0.583800 0.000000 0.047100 0.000000 1.489500 0.000000 0.000000 0.068200 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Box13-lib"><bind_material><technique_common><instance_material symbol="WindowMat" target="#WindowMat"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Box9" id="Box9" sid="Box9"><matrix sid="matrix">0.065500 0.000000 0.000000 -1.107500 0.000000 2.465600 0.000000 1.254600 0.000000 0.000000 0.068200 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Box9-lib"><bind_material><technique_common><instance_material symbol="WindowMat" target="#WindowMat"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Box4" id="Box4" sid="Box4"><matrix sid="matrix">1.004000 0.000000 0.000000 0.600500 0.000000 0.047100 0.000000 1.010400 0.000000 0.000000 0.068200 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Box4-lib"><bind_material><technique_common><instance_material symbol="WindowMat" target="#WindowMat"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Box12" id="Box12" sid="Box12"><matrix sid="matrix">1.004000 0.000000 0.000000 -0.583800 0.000000 0.047100 0.000000 1.010400 0.000000 0.000000 0.068200 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Box12-lib"><bind_material><technique_common><instance_material symbol="WindowMat" target="#WindowMat"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Box1" id="Box1" sid="Box1"><matrix sid="matrix">0.065500 0.000000 0.000000 1.118800 0.000000 2.465600 0.000000 1.254600 0.000000 0.000000 0.068200 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Box1-lib"><bind_material><technique_common><instance_material symbol="WindowMat" target="#WindowMat"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Box8" id="Box8" sid="Box8"><matrix sid="matrix">0.038100 0.000000 0.000000 0.615500 0.000000 2.465600 0.000000 1.254600 0.000000 0.000000 0.068200 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Box8-lib"><bind_material><technique_common><instance_material symbol="WindowMat" target="#WindowMat"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Plane" id="Plane" sid="Plane"><matrix sid="matrix">0.534800 0.000000 0.000000 0.003900 0.000000 0.000000 -0.588000 1.228000 0.000000 0.520300 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Plane-lib"><bind_material><technique_common><instance_material symbol="WindowGlassMat" target="#WindowGlassMat"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Box3" id="Box3" sid="Box3"><matrix sid="matrix">1.004000 0.000000 0.000000 0.600500 0.000000 0.047100 0.000000 0.540700 0.000000 0.000000 0.068200 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Box3-lib"><bind_material><technique_common><instance_material symbol="WindowMat" target="#WindowMat"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Box7" id="Box7" sid="Box7"><matrix sid="matrix">1.004000 0.000000 0.000000 0.600500 0.000000 0.075000 0.000000 2.446700 0.000000 0.000000 0.068200 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Box7-lib"><bind_material><technique_common><instance_material symbol="WindowMat" target="#WindowMat"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Box6" id="Box6" sid="Box6"><matrix sid="matrix">1.004000 0.000000 0.000000 0.600500 0.000000 0.047100 0.000000 1.967600 0.000000 0.000000 0.068200 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Box6-lib"><bind_material><technique_common><instance_material symbol="WindowMat" target="#WindowMat"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Box15" id="Box15" sid="Box15"><matrix sid="matrix">1.004000 0.000000 0.000000 -0.583800 0.000000 0.075000 0.000000 2.446700 0.000000 0.000000 0.068200 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Box15-lib"><bind_material><technique_common><instance_material symbol="WindowMat" target="#WindowMat"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Box10" id="Box10" sid="Box10"><matrix sid="matrix">1.004000 0.000000 0.000000 -0.583800 0.000000 0.075000 0.000000 0.061600 0.000000 0.000000 0.068200 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Box10-lib"><bind_material><technique_common><instance_material symbol="WindowMat" target="#WindowMat"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Box11" id="Box11" sid="Box11"><matrix sid="matrix">1.004000 0.000000 0.000000 -0.583800 0.000000 0.047100 0.000000 0.540700 0.000000 0.000000 0.068200 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Box11-lib"><bind_material><technique_common><instance_material symbol="WindowMat" target="#WindowMat"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <extra><technique profile="MAX3D"><frame_rate>29.970030</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.000000</start_time><end_time>6.673333</end_time></technique></extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Window"></instance_visual_scene>
+  </scene>
+</COLLADA>
