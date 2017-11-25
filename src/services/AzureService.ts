@@ -11,13 +11,13 @@ class AzureService {
     fetch() {
         // TODO will be passed from the outside
         let sofaQuery = {
-                "Inputs":
-                  {
+            "Inputs":
+                {
                     "input1":
-                      [{ "sever": 1, "jih": 1, "zapad": 1, "vychod": 2,"ano/ne": ''},
-                      { "sever": 3, "jih": 1, "zapad": 1, "vychod": '1', "ano/ne": ''}]
-                  },
-                GlobalParameters: {}
+                        [{"sever": 1, "jih": 1, "zapad": 1, "vychod": 2, "ano/ne": ''},
+                        {"sever": 3, "jih": 1, "zapad": 1, "vychod": '1', "ano/ne": ''}]
+                },
+            GlobalParameters: {}
         };
 
         axios({
@@ -25,14 +25,13 @@ class AzureService {
             url: 'http://localhost:4000/sofa',
             data: sofaQuery
         }).then(response => response.data
-        ).then(function(outputs) {
-            // TODO prepare data for usage
-            console.log(outputs);
-        })
-        .catch(e => {
-            console.error(e);
-          }
-        )
+            ).then(outputs => {
+                // TODO prepare data for usage
+                console.log(outputs);
+            })
+            .catch(e => {
+                console.error(e);
+            })
     }
 }
 
