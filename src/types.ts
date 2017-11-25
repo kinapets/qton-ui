@@ -9,5 +9,5 @@ export interface AframePosition {
     z: number;
 }
 
-export const UNIT = 2;
+export const UNIT = 1;
 export const WALL_DEPTH = 0.0005;

@@ -7,9 +7,13 @@ import './App.css';
 import * as Rx from 'rxjs'
 import Block from './Block/Block';
 import AzureService from './services/AzureService';
+import {createPosition} from './lib';
+import {UNIT} from './types';
+import {BlockProps, WallType} from './Block/BlockTypes';
 
 const tv = require('./models/tv.dae');
 const sofa = require('./models/sofa/sofa.dae');
+
 
 class App extends React.Component<any, any> {
     constructor(props: Object) {
@@ -59,28 +63,8 @@ class App extends React.Component<any, any> {
                     <a-camera wasd-controls="acceleration: 100; fly: false">
                         <a-cursor></a-cursor>
                     </a-camera>
-
-                    {/*
-                    <a-entity
-                        geometry="primitive: box"
-                        position="-1 0.5 -2"
-                        rotation={`${this.state.position - 45} ${this.state.position} 1`}
-                        material="color: #EF2D5E"
-                        event-set__makevisible="_event: mouseenter; visible: false"
-                    />
-                    <a-entity
-                        geometry="primitive: sphere; radius: 1.25;"
-                        position="0 1.25 -5"
-                        material="color: #EF2D5E"
-                    />
-                    <a-entity
-                        geometry="primitive: cylinder; radius: 0.5, height: 1.5"
-                        position="1 0.75 -3"
-                        material="color: #FFC65D"
-                    />*/}
-                    <Block position={{x: 0, y: 0}}/>
-                    <Block position={{x: 4, y: 0}}/>
-
+                    <Block position={{x: 0, y: 0}} left={WallType.door}/>
+                    <Block position={{x: 1, y: 0}}/>
                     <a-sun-sky></a-sun-sky>
                 </a-scene>
             </div>
