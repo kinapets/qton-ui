@@ -12,6 +12,7 @@ import {BlockProps, WallType, WallEnum as Direction} from './Block/BlockTypes';
 import Room from './Room/Room'
 import {roomExample, PlaceType} from './Room/RoomTypes';
 import * as _ from 'lodash';
+import Places from './Places/Places';
 
 /**
  * Localstorage props
@@ -26,7 +27,11 @@ class App extends React.Component<any, any> {
         super(props);
         this.state = {clickedPosition: [], objects: [], queue: {
             'sofa': PlaceType.sofa,
-            'tv': PlaceType.tv
+            'tv': PlaceType.tv,
+            'coffeeTable': PlaceType.coffeeTable,
+            'table': PlaceType.table,
+            'wardrobe': PlaceType.wardrobe,
+            'flower': PlaceType.flower,
         }};
     }
 
@@ -63,7 +68,7 @@ class App extends React.Component<any, any> {
                     this.setState({...this.state, objects: this.state.objects.concat([{...obj, direction: Direction.Right}])})
                 }
             }
-            this.setState({clickedPosition: []});
+            this.setState({...this.state, clickedPosition: []});
         }
     }
 
@@ -77,6 +82,7 @@ class App extends React.Component<any, any> {
                         <a-cursor></a-cursor>
                     </a-camera>
                     <Room handleClick={this.handleClick.bind(this)} room={roomExample}/>
+                    <Places places={this.state.objects}/>
                     <a-sun-sky></a-sun-sky>
                 </a-scene>
             </div>

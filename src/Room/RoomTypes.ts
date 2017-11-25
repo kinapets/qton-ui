@@ -18,7 +18,9 @@ export enum PlaceType {
     sofa,
     tv,
     bed,
-    wardrobe
+    wardrobe,
+    coffeeTable,
+    flower
 }
 
 export interface RoomDefinition {
