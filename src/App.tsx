@@ -6,17 +6,20 @@ import {Entity, Scene} from 'aframe-react';
 import './App.css';
 import * as Rx from 'rxjs'
 import Block from './Block/Block';
+import AzureService from './services/AzureService';
 
 const tv = require('./models/tv.dae');
 const sofa = require('./models/sofa/sofa.dae');
 
 class App extends React.Component<any, any> {
-
     constructor(props: Object) {
         super(props);
         this.state = {
             position: 45
         }
+
+        // TODO pass correct data
+        AzureService.fetch();
     }
 
     rotate() {
