@@ -9,6 +9,7 @@ import Block from './Block/Block';
 import {createPosition} from './lib';
 import {UNIT} from './types';
 import {BlockProps, WallType} from './Block/BlockTypes';
+import Room from './Room/Room'
 
 const tv = require('./models/tv.dae');
 const sofa = require('./models/sofa/sofa.dae');
@@ -59,8 +60,7 @@ class App extends React.Component<any, any> {
                     <a-camera wasd-controls="acceleration: 100; fly: false">
                         <a-cursor></a-cursor>
                     </a-camera>
-                    <Block position={{x: 0, y: 0}} left={WallType.door}/>
-                    <Block position={{x: 1, y: 0}}/>
+                    <Room/>
                     <a-sun-sky></a-sun-sky>
                 </a-scene>
             </div>
