@@ -5,6 +5,7 @@ import {Entity, Scene} from 'aframe-react';
 import {Position, UNIT, WALL_DEPTH} from '../types'
 import {createPosition} from '../lib'
 const door = require('./door2.dae');
+const texture = require('./wall-texture.jpg');
 
 export enum WallEnum {
     Left,
@@ -54,11 +55,11 @@ class Wall extends React.Component<any, any> {
                     geometry={geometry}
                     position={position}
                     rotation="0 0 0"
-                    material="color: #000"
+                    material={`src: url(${texture})`}
                 />
-                {/* <a-entity position={createPosition({x: x + UNIT / 2, y: 0, z: y - 0.07})} scale="0.9 0.9 0.9" collada-model={`url(${door})`}></a-entity>
-                <a-entity position={createPosition({x: x + UNIT / 2, y: 0, z: y - UNIT + 0.07})} rotation="0 180 0" scale="0.9 0.9 0.9" collada-model={`url(${door})`}></a-entity> */}
-                <a-entity position={createPosition({x: x + UNIT, y: 0, z: (y - UNIT /2) - 0.14})} rotation="0 90 0" scale="0.9 0.9 0.9" collada-model={`url(${door})`}></a-entity>
+                 <a-entity position={createPosition({x: x + UNIT / 2, y: 0, z: y - 0.07})} scale="0.9 0.9 0.9" collada-model={`url(${door})`}></a-entity>
+                <a-entity position={createPosition({x: x + UNIT / 2, y: 0, z: y - UNIT + 0.07})} rotation="0 180 0" scale="0.9 0.9 0.9" collada-model={`url(${door})`}></a-entity>
+                {/* <a-entity position={createPosition({x: x + UNIT, y: 0, z: (y - UNIT /2) - 0.14})} rotation="0 90 0" scale="0.9 0.9 0.9" collada-model={`url(${door})`}></a-entity> */}
             </Entity>
         );
     }

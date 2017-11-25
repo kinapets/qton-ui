@@ -6,6 +6,7 @@ import Wall from './Wall';
 import {WallEnum} from './Wall';
 import {Position, UNIT} from '../types';
 
+const floor = require('./floor-texture.jpg');
 
 
 interface BlockProps{
@@ -29,14 +30,15 @@ class Block extends React.Component<any, any> {
         return (
                 <Entity>
                     <Wall blockPosition={{x, y}} type={WallEnum.Back}/>
-                    {/* <Wall blockPosition={{x, y}} type={WallEnum.Front}/>
-                    <Wall blockPosition={{x, y}} type={WallEnum.Right}/> */}
+                     <Wall blockPosition={{x, y}} type={WallEnum.Front}/>
+                    {/*<Wall blockPosition={{x, y}} type={WallEnum.Right}/>
+                    <Wall blockPosition={{x, y}} type={WallEnum.Left}/> */}
 
                     <a-entity
                         geometry={`primitive: plane; width: ${UNIT}; height: ${UNIT}`}
                         position={`${x + UNIT / 2 } 0 ${y - UNIT/2}`}
                         rotation="-90 0 0"
-                        material="color: #7BC8A4"
+                        material={`src: ${floor}`}
                     />
                 </Entity>
         );
