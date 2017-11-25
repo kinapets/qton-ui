@@ -6,7 +6,6 @@ import {Entity, Scene} from 'aframe-react';
 import './App.css';
 import * as Rx from 'rxjs'
 import Block from './Block/Block';
-import AzureService from './services/AzureService';
 import {createPosition} from './lib';
 import {UNIT} from './types';
 import {BlockProps, WallType} from './Block/BlockTypes';
@@ -21,9 +20,6 @@ class App extends React.Component<any, any> {
         this.state = {
             position: 45
         }
-
-        // TODO pass correct data
-        AzureService.fetch();
     }
 
     rotate() {
