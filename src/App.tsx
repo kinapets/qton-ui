@@ -7,9 +7,14 @@ import './App.css';
 import * as Rx from 'rxjs'
 import Block from './Block/Block';
 import AzureService from './services/AzureService';
+import DistanceService from './services/DistanceService';
+// TODO maybe move to some common interfaces
+import {PlaceType, RoomDefinition} from './services/DistanceService';
 
 const tv = require('./models/tv.dae');
 const sofa = require('./models/sofa/sofa.dae');
+
+
 
 class App extends React.Component<any, any> {
     constructor(props: Object) {
@@ -19,7 +24,21 @@ class App extends React.Component<any, any> {
         }
 
         // TODO pass correct data
-        AzureService.fetch();
+
+        const roomExample: RoomDefinition = {
+            definition: [
+                [1, 1, 1, 1, 1, 1, 1, 1, 2, 1 ],
+                [3, 0, 0, 0, 0, 2, 0, 0, 0, 1 ],
+                [3, 0, 0, 0, 0, 1, 0, 0, 0, 1 ],
+                [1, 0, 0, 0, 0, 3, 0, 0, 0, 3 ],
+                [1, 0, 0, 0, 0, 3, 0, 0, 0, 1 ],
+                [1, 0, 0, 0, 0, 1, 0, 0, 0, 3 ],
+                [1, 1, 2, 1, 1, 1, 1, 1, 3, 1 ],
+            ]
+        }
+
+        const flattenDistances = DistanceService.getDistances(roomExample, PlaceType.SOFA);
+        AzureService.fetchDataForSofa(flattenDistances);
     }
 
     rotate() {

@@ -8,14 +8,21 @@ class AzureService {
 
     constructor() {}
 
-    fetch() {
-        // TODO will be passed from the outside
+    fetchDataForSofa(flattenDistances: any[]) {
+        // add "Label" option needed by Azure
+        flattenDistances = flattenDistances.map(distance => {
+            return {...distance, "ano/ne": ""}
+        });
+
         let sofaQuery = {
             "Inputs":
                 {
                     "input1":
-                        [{"sever": 1, "jih": 1, "zapad": 1, "vychod": 2, "ano/ne": ''},
-                        {"sever": 3, "jih": 1, "zapad": 1, "vychod": '1', "ano/ne": ''}]
+                        [...flattenDistances
+                            // TESTING DATA
+                            //     {"sever": 1, "jih": 1, "zapad": 1, "vychod": 2, "ano/ne": ''},
+                            // {"sever": 3, "jih": 1, "zapad": 1, "vychod": '1', "ano/ne": ''}
+                        ]
                 },
             GlobalParameters: {}
         };
