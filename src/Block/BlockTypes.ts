@@ -25,4 +25,5 @@ export interface BlockProps {
     right?: WallType;
     front?: WallType;
     back?: WallType;
+    handleClick: Function;
 }

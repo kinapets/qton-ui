@@ -7,12 +7,13 @@ import {createPosition} from '../lib'
 import {WallEnum, WallType, WallProps} from "./BlockTypes";
 
 const door = require('./door2.dae');
-const texture = require('./wall-texture.jpg');
+const texture = require('./wall-text.jpg');
 const window = require('./window.dae');
 
 
 class Wall extends React.Component<any, any> {
     props: WallProps;
+
 
     /**
      * Geometry for wall
@@ -124,9 +125,7 @@ class Wall extends React.Component<any, any> {
             geometryHalf = this.getGeometryHalfWall(direction),
             positionHalp = this.getPositionHalfWall(direction);
         return (
-            <Entity id="Wall">
-                {this.renderWallType()}
-            </Entity>
+            <Entity id="Walla">{this.renderWallType()}</Entity>
         );
     }
 }

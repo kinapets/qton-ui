@@ -1,3 +1,6 @@
+import * as _ from 'lodash';
+import {WallType} from '../Block/BlockTypes';
+
 export enum EdgeTypes {
     nothing,
     wall,
@@ -22,31 +25,29 @@ export interface RoomDefinition {
     definition: PlaceType[][];
 }
 
-interface PlaceDefinition {
-    currentPlace: PlaceType;
+export interface PlaceDefinition {
+    currentPlace: PlaceType | null;
     edges: {
-        front: EdgeTypes;
-        back: EdgeTypes;
-        left: EdgeTypes;
-        right: EdgeTypes;
-    }
+        front: WallType | null;
+        back: WallType | null;
+        left: WallType | null;
+        right: WallType | null;
+    } | null,
     m: number;
     n: number;
 
 }
 
-const roomExample: RoomDefinition = {
+export const roomExample: RoomDefinition = {
     definition: [
         [1, 1, 1, 1, 1, 1, 1, 1, 2, 1 ],
-        [3, 0, 0, 0, 0, 2, 0, 0, 0, 1 ],
-        [3, 0, 0, 0, 0, 1, 0, 0, 0, 1 ],
-        [1, 0, 0, 0, 0, 3, 0, 0, 0, 3 ],
-        [1, 0, 0, 0, 0, 3, 0, 0, 0, 1 ],
-        [1, 0, 0, 0, 0, 1, 0, 0, 0, 3 ],
-        [1, 1, 2, 1, 1, 1, 1, 1, 3, 1 ],
+        [3, 7, 0, 0, 0, 0, 0, 0, 7, 1 ],
+        [3, 0, 0, 0, 0, 0, 0, 0, 0, 1 ],
+        [1, 0, 0, 0, 0, 0, 0, 0, 0, 3 ],
+        [1, 0, 0, 0, 7, 0, 0, 0, 0, 1 ],
+        [1, 0, 0, 0, 7, 0, 0, 0, 0, 3 ],
+        [1, 0, 0, 0, 0, 0, 0, 0, 0, 1 ],
+        [1, 7, 0, 0, 0, 0, 0, 0, 7, 1 ],
+        [1, 2, 1, 1, 1, 1, 1, 1, 1, 1 ],
     ]
 }
-
-
-
-
