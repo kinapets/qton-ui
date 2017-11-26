@@ -4,7 +4,8 @@ import * as React from 'react';
 import {Entity, Scene} from 'aframe-react';
 import {createPosition} from './../lib';
 import {WallEnum as Direction} from '../Block/BlockTypes';
-import {roomExample, PlaceType} from '../Room/RoomTypes';
+import {roomExample} from '../Room/RoomTypes';
+import {PlaceType} from '../common';
 
 import {Position, UNIT} from '../types';
 import * as _ from 'lodash';

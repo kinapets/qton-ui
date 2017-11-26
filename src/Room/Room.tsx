@@ -4,7 +4,7 @@ import * as React from 'react';
 import {Entity, Scene} from 'aframe-react';
 import {WallEnum, WallType, BlockProps, WallProps} from '../Block/BlockTypes';
 import Block from '../Block/Block';
-import {RoomDefinition, PlaceDefinition, PlaceType} from './RoomTypes';
+import {RoomDefinition, PlaceDefinition, PlaceType} from '../common';
 import {transformForRender} from './trasform-for-render';
 import {createPosition} from "../lib";
 import * as _ from 'lodash';

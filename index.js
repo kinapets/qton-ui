@@ -25,7 +25,7 @@ const defaultOptions = {
 
 app.post('/sofa', function (req, res) {
   const customOptions = {
-    url: 'https://ussouthcentral.services.azureml.net/workspaces/c303c51978ec47539ea201a965b485f1/services/3a723bedb34c411d9574a17865c61d30/execute',
+    url: 'https://ussouthcentral.services.azureml.net/workspaces/c303c51978ec47539ea201a965b485f1/services/3a723bedb34c411d9574a17865c61d30/execute?api-version=2.0&format=swagger',
     body: req.body
   };
 
