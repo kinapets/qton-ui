@@ -62,20 +62,20 @@ class DistanceService {
         const dataSet = roomDefinition.definition.map((array, m) => {
             return array.map((item: PlaceType, n) => {
                 return {
-                    distance_top_wall: this.getDistance({m: m, n: n}, Direction.TOP),
-                    distance_right_wall: this.getDistance({m: m, n: n}, Direction.RIGHT),
-                    distance_bottom_wall: this.getDistance({m: m, n: n}, Direction.BOTTOM),
-                    distance_left_wall: this.getDistance({m: m, n: n}, Direction.LEFT),
+                    sever: this.getDistance({m: m, n: n}, Direction.TOP),
+                    vychod: this.getDistance({m: m, n: n}, Direction.RIGHT),
+                    jih: this.getDistance({m: m, n: n}, Direction.BOTTOM),
+                    zapad: this.getDistance({m: m, n: n}, Direction.LEFT),
 
-                    distance_top_window: this.getDistance({m: m, n: n}, Direction.TOP, PlaceType.window),
-                    distance_right_window: this.getDistance({m: m, n: n}, Direction.RIGHT, PlaceType.window),
-                    distance_bottom_window: this.getDistance({m: m, n: n}, Direction.BOTTOM, PlaceType.window),
-                    distance_left_window: this.getDistance({m: m, n: n}, Direction.LEFT, PlaceType.window),
+                    // distance_top_window: this.getDistance({m: m, n: n}, Direction.TOP, PlaceType.window),
+                    // distance_right_window: this.getDistance({m: m, n: n}, Direction.RIGHT, PlaceType.window),
+                    // distance_bottom_window: this.getDistance({m: m, n: n}, Direction.BOTTOM, PlaceType.window),
+                    // distance_left_window: this.getDistance({m: m, n: n}, Direction.LEFT, PlaceType.window),
 
-                    distance_top_door: this.getDistance({m: m, n: n}, Direction.TOP, PlaceType.door),
-                    distance_right_door: this.getDistance({m: m, n: n}, Direction.RIGHT, PlaceType.door),
-                    distance_bottom_door: this.getDistance({m: m, n: n}, Direction.BOTTOM, PlaceType.door),
-                    distance_left_door: this.getDistance({m: m, n: n}, Direction.LEFT, PlaceType.door),
+                    // distance_top_door: this.getDistance({m: m, n: n}, Direction.TOP, PlaceType.door),
+                    // distance_right_door: this.getDistance({m: m, n: n}, Direction.RIGHT, PlaceType.door),
+                    // distance_bottom_door: this.getDistance({m: m, n: n}, Direction.BOTTOM, PlaceType.door),
+                    // distance_left_door: this.getDistance({m: m, n: n}, Direction.LEFT, PlaceType.door),
             }
             });
         });
