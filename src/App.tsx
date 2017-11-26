@@ -29,6 +29,7 @@ class App extends React.Component<any, any> {
     state: {clickedPosition: Position[], objects: {position: Position, type: PlaceType, direction: Direction}[], queue: {[key:string]: PlaceType}}
     constructor(props: Object) {
         super(props);
+        localStorage.state = 1;
         this.state = !localStorage.state ? {clickedPosition: [], objects: [], queue: {
             'sofa': PlaceType.sofa,
             'tv': PlaceType.tv,
@@ -83,9 +84,11 @@ class App extends React.Component<any, any> {
         return (
             <div className="App">
                 <a-scene>
+                <a-entity id="myCameraPosition" position="3.336 0 5.949" rotation="0 20 0">
                     <a-camera wasd-controls="acceleration: 100; fly: false">
                         <a-cursor></a-cursor>
                     </a-camera>
+                    </a-entity>
                     <Room handleClick={this.handleClick.bind(this)} room={roomExample} heatmap={heatmapExample}/>
                     <Places places={this.state.objects}/>
                     <a-sun-sky></a-sun-sky>
