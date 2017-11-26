@@ -168,9 +168,9 @@ class Places extends React.Component<any, any> {
             <a-entity
                 id={`flower:${position.x}:${position.y}`}
                 key={`flower:${position.x}:${position.y}`}
-                position={createPosition({x: x, y: -0.43, z: y})}
+                position={createPosition({x: x, y: -0.83, z: y})}
                 rotation={`0 ${rotation} 0`}
-                scale="0.8 0.8 0.8"
+                scale="1.5 1.5 1.5"
                 collada-model={`url(flower/model.dae)`}
             />
         );

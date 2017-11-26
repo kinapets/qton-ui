@@ -12,6 +12,7 @@ import * as _ from 'lodash';
 
 interface RoomProps {
     room: RoomDefinition;
+    heatmap: number[][];
     handleClick: Function;
 }
 
@@ -26,7 +27,7 @@ class Room extends React.Component<any, any> {
 
     constructor(props: RoomProps) {
         super(props);
-        this.state = {places: transformForRender(this.props.room)};
+        this.state = {places: transformForRender(this.props.room, this.props.heatmap)};
 
     }
 
@@ -44,7 +45,7 @@ class Room extends React.Component<any, any> {
 
         return (
             <Entity key={`block${place.m}:${place.n}`}>
-                <Block handleClick={this.props.handleClick} position={{x: place.m, y: place.n}} {...walls}/>
+                <Block heatmapValue={place.heatmapValue} handleClick={this.props.handleClick} position={{x: place.m, y: place.n}} {...walls}/>
             </Entity>
         );
     }

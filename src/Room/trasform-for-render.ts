@@ -14,7 +14,7 @@ function placeTypeToWallType(placeType: PlaceType): any {
     }
 }
 
-export function transformForRender(room: RoomDefinition): PlaceDefinition[] {
+export function transformForRender(room: RoomDefinition, heatmap?: number[][]): PlaceDefinition[] {
     const def = room.definition;
     const places: PlaceDefinition[] = [];
 
@@ -51,6 +51,7 @@ export function transformForRender(room: RoomDefinition): PlaceDefinition[] {
                     edges,
                     m: m,
                     n: nn,
+                    heatmapValue: _.get(heatmap, `[${nn}][${mm}]`)
                 });
                 m++;
                 return {

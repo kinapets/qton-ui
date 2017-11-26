@@ -10,7 +10,7 @@ import {createPosition} from './lib';
 import {UNIT, Position} from './types';
 import {BlockProps, WallType, WallEnum as Direction} from './Block/BlockTypes';
 import Room from './Room/Room'
-import {roomExample, PlaceType} from './Room/RoomTypes';
+import {roomExample, PlaceType, heatmapExample} from './Room/RoomTypes';
 import * as _ from 'lodash';
 import Places from './Places/Places';
 
@@ -18,21 +18,25 @@ import Places from './Places/Places';
  * Localstorage props
  * heatmap - turn of/on heatmap
  * type - type of object to add
+ * state - to hydraze state
  *
  */
+
+// {"clickedPosition":[],"objects":[{"position":{"x":1,"y":1},"type":6,"direction":1},{"position":{"x":7,"y":4},"type":4,"direction":0},{"position":{"x":-1.72,"y":3},"type":9,"direction":1}],"queue":{"sofa":6,"tv":7,"coffeeTable":10,"table":4,"wardrobe":9,"flower":11}}
+
 
 class App extends React.Component<any, any> {
     state: {clickedPosition: Position[], objects: {position: Position, type: PlaceType, direction: Direction}[], queue: {[key:string]: PlaceType}}
     constructor(props: Object) {
         super(props);
-        this.state = {clickedPosition: [], objects: [], queue: {
+        this.state = !localStorage.state ? {clickedPosition: [], objects: [], queue: {
             'sofa': PlaceType.sofa,
             'tv': PlaceType.tv,
             'coffeeTable': PlaceType.coffeeTable,
             'table': PlaceType.table,
             'wardrobe': PlaceType.wardrobe,
             'flower': PlaceType.flower,
-        }};
+        }} : {"clickedPosition":[],"objects":[{"position":{"x":1,"y":1},"type":6,"direction":1},{"position":{"x":7,"y":4},"type":4,"direction":0},{"position":{"x":-1.72,"y":3},"type":9,"direction":1},{"position":{"x":0.5,"y":8},"type":11,"direction":1}],"queue":{"sofa":6,"tv":7,"coffeeTable":10,"table":4,"wardrobe":9,"flower":11}};
     }
 
 
@@ -69,6 +73,7 @@ class App extends React.Component<any, any> {
                 }
             }
             this.setState({...this.state, clickedPosition: []});
+            console.log(JSON.stringify(this.state));
         }
     }
 
@@ -81,7 +86,7 @@ class App extends React.Component<any, any> {
                     <a-camera wasd-controls="acceleration: 100; fly: false">
                         <a-cursor></a-cursor>
                     </a-camera>
-                    <Room handleClick={this.handleClick.bind(this)} room={roomExample}/>
+                    <Room handleClick={this.handleClick.bind(this)} room={roomExample} heatmap={heatmapExample}/>
                     <Places places={this.state.objects}/>
                     <a-sun-sky></a-sun-sky>
                 </a-scene>

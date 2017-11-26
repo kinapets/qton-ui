@@ -26,4 +26,5 @@ export interface BlockProps {
     front?: WallType;
     back?: WallType;
     handleClick: Function;
+    heatmapValue?: number;
 }

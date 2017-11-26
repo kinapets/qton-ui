@@ -29,6 +29,7 @@ export interface RoomDefinition {
 
 export interface PlaceDefinition {
     currentPlace: PlaceType | null;
+    heatmapValue?: number;
     edges: {
         front: WallType | null;
         back: WallType | null;
@@ -53,3 +54,15 @@ export const roomExample: RoomDefinition = {
         [1, 2, 1, 1, 1, 1, 1, 1, 1, 1 ],
     ]
 }
+
+export const heatmapExample: number[][] = [
+        [0.1, 0.2, 0., 0, 0, 0, 0, 0, 0, 0 ],
+        [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.7, 8 ],
+        [0, 0, 0, 0, 0.8, 0.8, 0.8, 0, 0, 0 ],
+        [0, 0, 0, 0, 1, 1, 1, 0, 0, 0 ],
+        [0, 0, 0, 0, 1, 1, 1, 0, 0, 0 ],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+];
