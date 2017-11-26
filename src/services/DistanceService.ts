@@ -1,38 +1,5 @@
 import * as _ from 'lodash';
-
-export enum PlaceType {
-    NOTHING,
-    WALL,
-    DOOR,
-    WINDOW,
-    TABLE,
-    DINNERTABLE,
-    SOFA,
-    TV,
-    BED,
-    WARDROBE
-}
-
-export enum Direction {
-    TOP,
-    BOTTOM,
-    LEFT,
-    RIGHT
-}
-
-export interface RoomPixel {
-    top: number;
-    bottom: number;
-    right: number;
-    left: number;
-    placeType: PlaceType;
-}
-
-export interface RoomDefinition {
-    definition: PlaceType[][];
-}
-
-export interface Position {m: number; n: number;}
+import {RoomDefinition, PlaceType, Direction, Position} from '../common';
 
 class DistanceService {
     private roomDefinition: RoomDefinition;
@@ -70,8 +37,8 @@ class DistanceService {
             placeType = _.get(this.roomDefinition.definition, `[${m}][${n}]`, -1);
             // either is searchedType defined and if so, it has to match
             // OR it's undefined and then it's a wall and we count distance for windows and doors as well
-        const typeMatch = _.isUndefined(searchedType) ? placeType < PlaceType.WINDOW : placeType === searchedType;
-        return (isOnEdgeOfMatrix || (typeMatch && placeType !== PlaceType.NOTHING));
+        const typeMatch = _.isUndefined(searchedType) ? placeType < PlaceType.window : placeType === searchedType;
+        return (isOnEdgeOfMatrix || (typeMatch && placeType !== PlaceType.nothing));
     }
 
     private getDirectionVector(direction: Direction): Position {
@@ -100,15 +67,15 @@ class DistanceService {
                     distance_bottom_wall: this.getDistance({m: m, n: n}, Direction.BOTTOM),
                     distance_left_wall: this.getDistance({m: m, n: n}, Direction.LEFT),
 
-                    distance_top_window: this.getDistance({m: m, n: n}, Direction.TOP, PlaceType.WINDOW),
-                    distance_right_window: this.getDistance({m: m, n: n}, Direction.RIGHT, PlaceType.WINDOW),
-                    distance_bottom_window: this.getDistance({m: m, n: n}, Direction.BOTTOM, PlaceType.WINDOW),
-                    distance_left_window: this.getDistance({m: m, n: n}, Direction.LEFT, PlaceType.WINDOW),
+                    distance_top_window: this.getDistance({m: m, n: n}, Direction.TOP, PlaceType.window),
+                    distance_right_window: this.getDistance({m: m, n: n}, Direction.RIGHT, PlaceType.window),
+                    distance_bottom_window: this.getDistance({m: m, n: n}, Direction.BOTTOM, PlaceType.window),
+                    distance_left_window: this.getDistance({m: m, n: n}, Direction.LEFT, PlaceType.window),
 
-                    distance_top_door: this.getDistance({m: m, n: n}, Direction.TOP, PlaceType.DOOR),
-                    distance_right_door: this.getDistance({m: m, n: n}, Direction.RIGHT, PlaceType.DOOR),
-                    distance_bottom_door: this.getDistance({m: m, n: n}, Direction.BOTTOM, PlaceType.DOOR),
-                    distance_left_door: this.getDistance({m: m, n: n}, Direction.LEFT, PlaceType.DOOR),
+                    distance_top_door: this.getDistance({m: m, n: n}, Direction.TOP, PlaceType.door),
+                    distance_right_door: this.getDistance({m: m, n: n}, Direction.RIGHT, PlaceType.door),
+                    distance_bottom_door: this.getDistance({m: m, n: n}, Direction.BOTTOM, PlaceType.door),
+                    distance_left_door: this.getDistance({m: m, n: n}, Direction.LEFT, PlaceType.door),
             }
             });
         });

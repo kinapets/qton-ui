@@ -1,4 +1,4 @@
-import {RoomDefinition, PlaceType, PlaceDefinition} from './RoomTypes';
+import {RoomDefinition, PlaceType, PlaceDefinition} from '../common';
 import {WallType} from '../Block/BlockTypes';
 import * as _ from 'lodash';
 

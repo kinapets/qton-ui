@@ -9,12 +9,12 @@ import Block from './Block/Block';
 import AzureService from './services/AzureService';
 import DistanceService from './services/DistanceService';
 // TODO maybe move to some common interfaces
-import {PlaceType, RoomDefinition} from './services/DistanceService';
+import {PlaceType, RoomDefinition} from './common';
 import {createPosition} from './lib';
 import {UNIT, Position} from './types';
 import {BlockProps, WallType, WallEnum as Direction} from './Block/BlockTypes';
 import Room from './Room/Room'
-import {roomExample, PlaceType, heatmapExample} from './Room/RoomTypes';
+import {roomExample, heatmapExample} from './Room/RoomTypes';
 import * as _ from 'lodash';
 import Places from './Places/Places';
 
@@ -27,9 +27,6 @@ import Places from './Places/Places';
  */
 
 // {"clickedPosition":[],"objects":[{"position":{"x":1,"y":1},"type":6,"direction":1},{"position":{"x":7,"y":4},"type":4,"direction":0},{"position":{"x":-1.72,"y":3},"type":9,"direction":1}],"queue":{"sofa":6,"tv":7,"coffeeTable":10,"table":4,"wardrobe":9,"flower":11}}
-
-
-
 
 class App extends React.Component<any, any> {
     state: {clickedPosition: Position[], objects: {position: Position, type: PlaceType, direction: Direction}[], queue: {[key:string]: PlaceType}}
@@ -53,7 +50,7 @@ class App extends React.Component<any, any> {
             ]
         }
 
-        const flattenDistances = DistanceService.getDistances(roomExample, PlaceType.SOFA);
+        const flattenDistances = DistanceService.getDistances(roomExample, PlaceType.sofa);
         AzureService.fetchDataForSofa(flattenDistances);
         this.state = !localStorage.state ? {clickedPosition: [], objects: [], queue: {
             'sofa': PlaceType.sofa,
