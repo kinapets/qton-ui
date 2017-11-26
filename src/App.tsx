@@ -10,13 +10,29 @@ import AzureService from './services/AzureService';
 import DistanceService from './services/DistanceService';
 // TODO maybe move to some common interfaces
 import {PlaceType, RoomDefinition} from './services/DistanceService';
+import {createPosition} from './lib';
+import {UNIT, Position} from './types';
+import {BlockProps, WallType, WallEnum as Direction} from './Block/BlockTypes';
+import Room from './Room/Room'
+import {roomExample, PlaceType, heatmapExample} from './Room/RoomTypes';
+import * as _ from 'lodash';
+import Places from './Places/Places';
 
-const tv = require('./models/tv.dae');
-const sofa = require('./models/sofa/sofa.dae');
+/**
+ * Localstorage props
+ * heatmap - turn of/on heatmap
+ * type - type of object to add
+ * state - to hydraze state
+ *
+ */
+
+// {"clickedPosition":[],"objects":[{"position":{"x":1,"y":1},"type":6,"direction":1},{"position":{"x":7,"y":4},"type":4,"direction":0},{"position":{"x":-1.72,"y":3},"type":9,"direction":1}],"queue":{"sofa":6,"tv":7,"coffeeTable":10,"table":4,"wardrobe":9,"flower":11}}
+
 
 
 
 class App extends React.Component<any, any> {
+    state: {clickedPosition: Position[], objects: {position: Position, type: PlaceType, direction: Direction}[], queue: {[key:string]: PlaceType}}
     constructor(props: Object) {
         super(props);
         this.state = {
@@ -39,37 +55,55 @@ class App extends React.Component<any, any> {
 
         const flattenDistances = DistanceService.getDistances(roomExample, PlaceType.SOFA);
         AzureService.fetchDataForSofa(flattenDistances);
+        this.state = !localStorage.state ? {clickedPosition: [], objects: [], queue: {
+            'sofa': PlaceType.sofa,
+            'tv': PlaceType.tv,
+            'coffeeTable': PlaceType.coffeeTable,
+            'table': PlaceType.table,
+            'wardrobe': PlaceType.wardrobe,
+            'flower': PlaceType.flower,
+        }} : {"clickedPosition":[],"objects":[{"position":{"x":1,"y":1},"type":6,"direction":1},{"position":{"x":7,"y":4},"type":4,"direction":0},{"position":{"x":-1.72,"y":3},"type":9,"direction":1},{"position":{"x":0.5,"y":8},"type":11,"direction":1}],"queue":{"sofa":6,"tv":7,"coffeeTable":10,"table":4,"wardrobe":9,"flower":11}};
     }
 
-    rotate() {
+
+    handleClick = (x: number, y: number) => {
+        console.log('Clicked from App', x, y);
+
+        if (localStorage.heatmap ) {
+            console.log("Local storage heatmap is on");
+        }
         this.setState({
-            ...this.state,
-            position: this.state.position + 0.1
-        })
+            clickedPosition: this.state.clickedPosition.concat([{x,y}])
+        });
+        console.log(this.state);
+        if (this.state.clickedPosition.length === 2) {
+            const first = this.state.clickedPosition[0],
+                second = this.state.clickedPosition[1];
+
+            let obj = {position: {x: first.x, y: first.y}, type: this.state.queue[localStorage.type] || PlaceType.sofa}
+            if (Math.abs(first.x - second.x) > Math.abs(first.y - second.y)) {
+                if (first.x > second.x) {
+                    console.log("Direction back");
+                    this.setState({...this.state, objects: this.state.objects.concat([{...obj, direction: Direction.Back}])})
+                } else {
+                    console.log("Direction front");
+                    this.setState({...this.state, objects: this.state.objects.concat([{...obj, direction: Direction.Front}])})
+                }
+            } else {
+                if (first.y > second.y) {
+                    console.log("Direction left");
+                    this.setState({...this.state, objects: this.state.objects.concat([{...obj, direction: Direction.Left}])})
+                } else {
+                    console.log("Direction right");
+                    this.setState({...this.state, objects: this.state.objects.concat([{...obj, direction: Direction.Right}])})
+                }
+            }
+            this.setState({...this.state, clickedPosition: []});
+            console.log(JSON.stringify(this.state));
+        }
     }
 
-    componentWillMount() {
-        var source = Rx.Observable.timer(200, 2)
-            .timeInterval()
-            .pluck('interval');
 
-        var subscription = source.subscribe(
-            this.rotate.bind(this),
-            function(err) {
-                console.log('Error: ' + err);
-            },
-            function() {
-                console.log('Completed');
-            });
-    }
-
-    handleClick = () => {
-        console.log('Clicked!');
-      }
-
-      handleCollide = () => {
-        console.log('Collided!');
-      }
 
     render() {
         return (
@@ -78,28 +112,8 @@ class App extends React.Component<any, any> {
                     <a-camera wasd-controls="acceleration: 100; fly: false">
                         <a-cursor></a-cursor>
                     </a-camera>
-
-                    {/*
-                    <a-entity
-                        geometry="primitive: box"
-                        position="-1 0.5 -2"
-                        rotation={`${this.state.position - 45} ${this.state.position} 1`}
-                        material="color: #EF2D5E"
-                        event-set__makevisible="_event: mouseenter; visible: false"
-                    />
-                    <a-entity
-                        geometry="primitive: sphere; radius: 1.25;"
-                        position="0 1.25 -5"
-                        material="color: #EF2D5E"
-                    />
-                    <a-entity
-                        geometry="primitive: cylinder; radius: 0.5, height: 1.5"
-                        position="1 0.75 -3"
-                        material="color: #FFC65D"
-                    />*/}
-                    <Block position={{x: 0, y: 0}}/>
-                    <Block position={{x: 4, y: 0}}/>
-
+                    <Room handleClick={this.handleClick.bind(this)} room={roomExample} heatmap={heatmapExample}/>
+                    <Places places={this.state.objects}/>
                     <a-sun-sky></a-sun-sky>
                 </a-scene>
             </div>
